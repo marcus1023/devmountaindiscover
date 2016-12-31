@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beginner Resources</title>
+    <title>DevMountain</title>
 <link rel="stylesheet" href="./style/reset.css">
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="./style/main.css">
-    <link rel="shortcut icon" href="https://onecoolsite.files.wordpress.com/2010/03/readstar.png">
+    <link rel="shortcut icon" href="img/little-dev-mtn.png">
 
 </head>
 <body ng-controller="mainController">
   <main role="main">
     <header>
       <div class="nav-bar">
+        <img src="img/discover-logo.png">
         <ul>
           <li>Students</li>
           <li>employers</li>
-          <li>create account</li>
+          <li id="create-account">create account</li>
         </ul>
       </div>
     </header>
@@ -71,19 +72,18 @@
       <h1>High intensity projects</h1>
       <h3 id="subheader">Projects designed to test skills and strech students - these projects made to simulate real employer design needs</h3>
       <div>
-      <div class="project-catigory">
+      <div class="project-catigory css-project-catigory">
+      <!-- Css projects -->
         <div class="project-cat-img project-img-one"> </div>
-        <div>
+        <a href=""><div>
           <h3>CSS Replication</h3>
           <span>these projects are designed to asses the subjects ability to replicate css.</span>
-        </div>
-        <img class="right-chevron" src="img/ChevronLeft-128.png">
+        </div></a>
+        <img class="down-chevron css-projects-toggle" src="img/ChevronLeft-128.png">
       </div>
       <div class="project-expansion-one">
-        <img class="right-chevron" src="img/ChevronLeft-128.png"><p>adfasdfasd</p>
-        <ul>
-          <test-directive></test-directive>
-        </ul>
+
+          <css-projects></css-projects>
       </div>
       <div class="project-catigory">
         <div class="project-cat-img project-img-two"> </div>
@@ -109,6 +109,21 @@
     </div>
     </section>
 
+    <section class="alumni-section">
+      <h1>Alumni</h1>
+      <span class="alumni-subtitle">Check out some of our prize students</span>
+      <ui-view></ui-view>
+      <div class="alumni-faces-section">
+        <div class="single-alumni" ng-repeat="alumni in allAlumni">
+          <a ui-sref="{{alumni.view}}"><img src="{{alumni.photo}}"></a>
+          <span class="alumni-company">{{alumni.company}}</span>
+          <h3>{{alumni.name}}</h3>
+          <span class="alumni-location">{{alumni.location}}</span>
+        </div>
+      </div>
+    </section>
+
+
     <footer>
       <ul>
         <li>About</li>
@@ -116,7 +131,6 @@
         <li>Devmountain Site</li>
         <li>-</li>
         <li>Contact</li>
-        <li></li>
       </ul>
     </footer>
 
@@ -127,17 +141,18 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
-<!-- <script
+<script
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!--Our Custom Script Files-->
 <script src="./js/app.js"></script>
 <script src="./js/mainController.js"></script>
 <script src="./js/mainService.js"></script>
 <script src="./js/css-directive.js"></script>
+<script src="./js/main.js"></script>
 <!-- <script src="./js/time-directive.js"></script> -->
 <!-- <script src="./js/test-directive.js"></script> -->
 

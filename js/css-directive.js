@@ -1,7 +1,7 @@
-angular.module('discoverApp').directive('showTime', function(){
+angular.module('discoverApp').directive('cssProjects', function(){
   return {
-    restrict: 'E',
-    templateUrl:' ../templates/css-projects-tmpl.js'
+    restrict: 'AE',
+    templateUrl: 'templates/css-projects-tmpl.html'
 
   }
 });
