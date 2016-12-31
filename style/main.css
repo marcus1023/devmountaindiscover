@@ -322,11 +322,12 @@ border-radius: 50%;
 ui-view{
   width: 90%;
 
-  background-size: contain;
+  background-size: cover;
 }
 .alumni-view{
   height: 50vh;
   border-radius: 5px;
+  background-size: cover;
 }
 .alumni-view {
   position: relative;
