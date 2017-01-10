@@ -1,0 +1,101 @@
+.parallax-one{
+    background: url('../img/students-class-white.png');
+}
+.parallax-two{
+    background: url('../img/lady-at-computer.jpg');
+}
+.home-class-parallax{
+  background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+  background-size: cover;
+  height: 65vh;
+  position: relative;
+}
+.class-parallax-overlay{
+  background: rgba(0,0,0, .3);
+  font-weight: 300;
+  position: absolute;
+  height: 65vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.class-parallax-overlay h1{
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+.class-parallax-overlay h2{
+  font-size: 2rem;
+  letter-spacing: .5rem;
+}
+.class-parallax-overlay div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: rgba(0,0,0, .6);
+  padding: 20px;
+}
+.student-section-all{
+  display: flex;
+  justify-content: space-around;
+}
+.employer-section-all{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+.home-student-section h1{
+padding-bottom: 70px;
+font-size: 5rem;
+letter-spacing: .2rem;
+}
+.home-student-section{
+  padding: 80px 0px 5px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.home-student-section button{
+  font-size: 1rem;
+  margin: 10px 5px;
+  padding: 8px 15px;
+  background: white;
+  background: #2AABE2;
+  color: white;
+  border: 2px solid #2AABE2;
+}
+.home-student-section  button:hover{
+  color: #2AABE2;
+  background: white;
+  border: 2px solid #2AABE2;
+}
+.home-employer-cta{
+  float: right;
+}
+.student-section-info{
+  width: 35%;
+}
+.student-section-image img{
+  width: 400px;
+}
+.student-section-info h2{
+  border-bottom: 2px solid rgba(0,0,0, .3);
+margin-left: -20px;
+  margin-bottom: 20px;
+}
+.student-section-info h3{
+  margin-left: -10px;
+}
+.student-info-paragraphs span{
+ font-size: 1rem;
+}
+.student-info-paragraphs div{
+  margin: 20px;
+}

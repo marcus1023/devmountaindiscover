@@ -1,0 +1,164 @@
+.top-spacer{
+  height: 50px;
+  width: 100%;
+}
+.user-profile-section{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.user-profile-bio{
+  margin: 0px auto;
+  padding: 20px;
+  width: 90%;
+}
+.user-profile-bio h2{
+margin: 10px -10px;
+}
+.user-profile-head{
+  display:flex;
+  align-items: flex-start;
+  margin-top:0px;
+  padding: 20px 20px 0px 20px;
+}
+.user-profile-head .profile-picture{
+  width: 200px;
+  height: 200px;
+}
+.user-profile-crossection{
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 20px 0px 20px;
+  width:100%
+}
+.user-profile-crossection img{
+  width: 25px;
+  margin-left: 5px;
+}
+
+.h-three-badges-div{
+  border-bottom: 2px solid rgba(0,0,0, .1);
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+.user-profile-crossection h3{
+  font-size: 1.2rem;
+  border-bottom: 2px solid rgba(0,0,0, .1);
+  margin-bottom: 5px;
+  padding:3px;
+}
+.user-profile-crossection .h-three-badges{
+    display: inline-block;
+      font-size: 2rem;
+}
+.user-profile-crossection .h-three-badges{
+  border-bottom: none;
+}
+.user-profile-crossection button{
+  float: right;
+  font-size: 1rem;
+  margin: 20px 5px;
+  background: white;
+  color: #2AABE2;
+  border: 2px solid #2AABE2;
+}
+.user-profile-crossection button:hover{
+  background: #2AABE2;
+  color: white;
+}
+.single-badge{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  background-color: rgba(	42,	171,	226, .2);
+  border-radius: 3px;
+  margin: 3px;
+}
+.single-badge:hover{
+    background-color: rgba(	42,	171,	226, .5);
+}
+.single-badge span{
+font-size: .8rem;
+}
+.user-profile-update{
+  display: flex;
+  flex-direction: column;
+}
+.user-profile-update button{
+  width: 200px;
+  font-size: 1rem;
+  margin: 10px 5px;
+  background: white;
+  color: #2AABE2;
+  border: 2px solid #2AABE2;
+}
+.user-profile-update button:hover{
+  background: #2AABE2;
+  color: white;
+}
+.company-profile-navbar{
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 40px;
+  background: rgba(0,0,0, .1);
+  width: 100%;
+}
+.company-profile-navbar ul{
+  padding-top: 5px;
+  margin-right: 10px;
+}
+.company-profile-navbar li{
+  padding: 2px 15px 5px 15px;
+  display: inline-block;
+  border-bottom: 1px solid rgba(0,0,0, .0);
+}
+.company-profile-navbar li:hover{
+  padding: 2px 15px 5px 15px;
+  display: inline-block;
+  border-bottom: 1px solid rgba(0,0,0, .3);
+}
+
+.current-user-progress{
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background: #e3e3e3;
+}
+.current-user-progress div{
+  background: #2AABE2;
+  height: 10px;
+}
+.user-company-links {
+font-size: 1rem;
+margin-left: 20px;
+padding: 0px 10px;
+}
+.user-company-links span{
+  padding-left: 20px;
+  display: inline-block;
+  text-align: center;
+}
+.test{
+  margin-bottom: 20px;
+}
+.user-company-links a{
+  color: black;
+  text-decoration: none;
+}
+.user-company-links:hover{
+  background-color: rgba(0,0,0, .05);
+  color: rgba(0,0,0, .7)
+}
+.user-company-box{
+padding: 2px 0px 5px 0px;
+  background: #f1f1f1;
+}

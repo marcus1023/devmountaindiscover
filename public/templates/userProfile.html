@@ -1,0 +1,61 @@
+<div ng-controller="mainController">
+<section class="user-profile-section">
+<div class="top-spacer"></div>
+<section class="user-profile-head">
+  <div class="profile-picture" style="background: url('{{currentUser.profileImage}}'); background-size:cover; background-position: center center;"></div>
+  <div class="user-profile-crossection">
+    <div>
+      <h1> {{currentUser.name}}</h1>
+      <div class="h-three-badges-div">
+        <h3 class="h-three-badges">Badges:</h3>
+        <div class="single-badge">
+          <img src="../img/htmlBadgeComplete.png">
+          <span>html / css</span>
+        </div>
+        <div class="single-badge">
+          <img src="../img/htmlBadgeComplete.png">
+          <span>Javascript</span>
+        </div>
+        <div class="single-badge">
+          <img src="../img/htmlBadgeComplete.png">
+          <span>Javascript 2</span>
+        </div>
+        <div class="single-badge" style="opacity: .5;">
+          <img src="../img/angularBadgePending.png">
+          <span>Angular JS</span>
+        </div>
+        <div class="single-badge" style="opacity: .5;">
+          <img src="../img/nodeBadgePending.png">
+          <span>Node JS</span>
+        </div>
+        <div class="single-badge" style="opacity: .5;">
+          <img src="../img/angularBadgePending.png">
+          <span>SQL Server</span>
+        </div>
+        </div>
+      <h3>Projects Completed: {{currentUser.ProjectsCompleted}}</h3>
+      <h3 class="test">Gethub Repos: {{currentUserGitRepos}}</h3>
+      <h3 class="progress-title">Class Progress: {{currentUser.progress}}%</h3>
+      <div class="current-user-progress">
+        <div style="width: {{currentUser.progress}}%"></div>
+      </div>
+      <button> Portfolio</button>
+    </div>
+    <div>
+    <span class="user-company-title">Company Projects:</span><br>
+      <div class="user-company-box">
+        <span class="user-company-links" ng-repeat="company in currentUserCompanies" ><a href="{{company.link}}">{{company.company}}</a></span>
+        <span class="user-company-links"></span>
+      </div>
+      <button> New Project...</button>
+    </div>
+  </div>
+</section>
+
+<section class="user-profile-bio">
+  <h2>Excelence in Design</h2>
+  <span>Squashy armchairs dirt on your nose brass scales crush the Sopophorous bean with flat side of silver dagger, releases juice better than cutting. Full moon Whomping Willow three turns should do it lemon drops. Locomotor trunks owl treats that will be 50 points, Mr. Potter. Witch Weekly, he will rise again and he will come for us, headmaster Erumpent horn. </span>
+</section>
+
+</section>
+</div>

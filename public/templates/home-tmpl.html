@@ -1,0 +1,122 @@
+<section class="top-video-section">
+<div class="fullscreen-bg">
+    <video loop muted autoplay poster="img/dev-mountain-true-img.png" class="fullscreen-bg__video">
+        <source src="img/dev-mountain-true.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay">
+      <h1>DevMountain</h1>
+      <h3>Discover</h3>
+      <div class="video-section-widgets">
+        <span>Get Started</span>
+        <div><button>Student</button>
+        <button>Employer</button></div>
+      </div>
+    </div>
+</div>
+
+</section>
+
+<section class="funnel-options-section">
+  <h1>Innovative by design</h1>
+  <span>Discover how our innovative full emersion program produces the best in the business</span>
+  <div class="funnels">
+    <div class="funnel-option">
+      <img src="img/Students.png">
+      <h2>Discover Tallent</h2>
+      <h3>Our students are the best in the world</h3>
+      <span>Read more</span>
+    </div>
+    <div class="funnel-option">
+      <img src="img/projects.png">
+      <h2>Discover Projects</h2>
+      <h3>Projects created to simulate employer demands</h3>
+      <span>Read more</span>
+    </div>
+    <div class="funnel-option">
+      <img src="img/profiles.png">
+      <h2>Create Profile</h2>
+      <h3>Become part of the community today!</h3>
+      <span>Read more</span>
+    </div>
+  </div>
+
+</section>
+
+<section class="home-class-parallax parallax-one ">
+  <div class="class-parallax-overlay">
+    <div>
+    <h1>Vet Potential Employees</h1>
+    <h2>Faster than ever</h2>
+    </div>
+  </div>
+</section>
+
+<section class="home-student-section">
+  <h1>Employers</h1>
+  <div class="employer-section-all">
+    <div class="student-section-info">
+      <h2>Employer Tools</h2>
+      <div class="student-info-paragraphs">
+        <div>
+          <h3>Job Specific Testing</h3>
+          <span> Hedwig Daily Prophet treacle tart full-moon Ollivanders You-Know-Who cursed. Fawkes maze raw-steak Voldemort Goblin Wars snitch Forbidden forest grindylows wool socks.</span>
+        </div>
+        <div>
+          <h3>Fully Accessable Metrics</h3>
+          <span> Hedwig Daily Prophet treacle tart full-moon Ollivanders You-Know-Who cursed. Fawkes maze raw-steak Voldemort Goblin Wars snitch Forbidden forest grindylows wool socks.</span>
+        </div>
+        <button class="home-employer-cta">Get Started</button>
+      </div>
+    </div>
+    <div class="student-section-image">
+      <img src="../img/business-man.png">
+    </div>
+  </div>
+</section>
+
+<section class="home-class-parallax parallax-two ">
+  <div class="class-parallax-overlay">
+    <div>
+    <h1>Connect. Test. Interview. Hier.</h1>
+    <!-- <h2>Faster than ever</h2> -->
+    </div>
+  </div>
+</section>
+
+<section class="home-student-section">
+  <h1>Students</h1>
+  <div class="student-section-all">
+    <div class="student-section-info">
+      <h2>Student Tools</h2>
+      <div class="student-info-paragraphs">
+        <div>
+          <h3>Employer specific Projects</h3>
+          <span> Hedwig Daily Prophet treacle tart full-moon Ollivanders You-Know-Who cursed. Fawkes maze raw-steak Voldemort Goblin Wars snitch Forbidden forest grindylows wool socks.</span>
+        </div>
+        <div>
+          <h3>Integrated Portfolios</h3>
+          <span> Hedwig Daily Prophet treacle tart full-moon Ollivanders You-Know-Who cursed. Fawkes maze raw-steak Voldemort Goblin Wars snitch Forbidden forest grindylows wool socks.</span>
+        </div>
+        <button class="home-student-cta">Create Account</button>
+      </div>
+    </div>
+    <div class="student-section-image">
+      <img src="../img/student-girl.jpg">
+    </div>
+  </div>
+</section>
+
+
+<section class="alumni-section">
+<h1>Alumni</h1>
+<span class="alumni-subtitle">Check out some of our prize students</span>
+<ui-view></ui-view>
+<div class="alumni-faces-section">
+  <div class="single-alumni" ng-repeat="alumni in allAlumni">
+    <a ui-sref="{{alumni.view}}"><img src="{{alumni.photo}}"></a>
+    <span class="alumni-company">{{alumni.company}}</span>
+    <h3>{{alumni.name}}</h3>
+    <span class="alumni-location">{{alumni.location}}</span>
+  </div>
+</div>
+</section>
