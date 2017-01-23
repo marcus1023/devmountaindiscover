@@ -16,6 +16,10 @@ h3{
 video {
   width: 100%;
 }
+.header-hideing{
+  width: 100%;
+  height: 60px;
+}
 .fullscreen-bg{
   position: relative;
 }
@@ -31,6 +35,45 @@ video {
   height: 100%;
   top: 0;
   background-color: rgba(0,0,0, .5);
+}
+.video-overlay-2{
+  text-transform: uppercase;
+  color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(0,0,0, .2);
+}
+.video-overlay-3{
+  text-transform: uppercase;
+  color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(0,0,0, .3);
+}
+.video-overlay-white{
+  text-transform: uppercase;
+  color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(255,255,255, .95);
 }
 .video-overlay h3{
   letter-spacing: 2rem;
@@ -380,19 +423,193 @@ right: 25px;
   height: 50vh;
   background: rgba(0,0,0, .5)
 }
-.signup-section{
+/*Create new project page*/
+.create-project-form{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+textarea{
+  height: 120px;
+}
+.create-project-form input,.create-project-form textarea{
+  width: 300px;
+  font-size: 1rem;
+  padding: 5px 10px;
+  margin: 0 0 10px 0 !important;
+  border: 1px solid #2AABE2;
+  border-radius: 3px;
+   resize: none;
+}
+
+/*CREATE new profile page*/
+.create-profile-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
-  background: #e1e1e1;
+}
+.create-profile-section h1{
+  margin: 0 0 20px 0;
+}
+.create-profile-section h3{
+  display: none;
+  opacity: .5;
+  margin: 20px 0 20px 0;
+}
+.create-profile-section h4{
+  display: none;
+  color: red;
+  margin: 20px 0 20px 0;
+}
+.create-profile-form input{
+  width: 300px;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  margin: 0 0 10px 0;
+  border: 1px solid #2AABE2;
+  border-radius: 3px;
+}
+.studentGetSection{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  z-index: 1;
+}
+.studentGetSection h1{
+margin: 0 0 20px 0;
+}
+.signin-section{
+  background: rgba(0,0,0, .1);
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+}
+.signup-section{
+  height: 100vh;
+  min-height: 600px;
+  background: #e1e1e1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   flex-direction: column;
-
+}
+.signup-section span{
+  margin: 0 0 10px 0;
+}
+.signup-section-3{
+  background: url('../img/employee-one.jpg');
+  background-position: center;
+  background-size:cover;
+  align-items: flex-start;
+  color: white;
+}
+.signup-section-2{
+  background: url('../img/student-signup.jpg');
+  background-position: center;
+  background-size:cover;
+  align-items: flex-start;
+  color: white;
+}
+.signup-section-1{
+  background: url('../img/main-signup.jpg');
+  background-position: center;
+  background-size:cover;
+  align-items: flex-start;
+  color: white;
+}
+.signup-banner{
+  z-index: 1;
+  margin-bottom: 5vh;
+  width: 100%;
+  padding: 20px;
+  height: 235px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0, .5)
+}
+.signup-section h1{
+  font-size: 4rem;
+  margin: 0 0 10px 0;
+}
+.signup-section h3{
+  margin: 0 0 30px 0;
 }
 .signup-section textarea{
   width: 350px;
   min-height: 200px;
 
+}
+.signUpBox{
+  display: flex;
+}
+.signUpBox div{
+  display: flex;
+  flex-direction: column;
+}
+.signUpBox span{
+  text-align: center;
+  margin-top: -10px;
+  font-size: 1rem;
+  font-weight: 500;
+color: white;
+}
+.signUpBox button{
+  /*width: 300px;*/
+  margin: 10px 20px;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  background: #2AABE2;
+  border-radius: 3px;
+  border: 2px solid rgba(0,0,0, .2);
+  color:white;
+}
+.discover-btn{
+  /*width: 300px;*/
+  margin: 10px 20px;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  background: #2AABE2;
+  border-radius: 3px;
+  border: 2px solid rgba(0,0,0, .2);
+  color:white;
+}
+.discover-btn:hover{
+  /*width: 300px;*/
+  margin: 10px 20px;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  background: white;
+  border-radius: 3px;
+  border: 2px solid #2AABE2;
+  color: #2AABE2;
+}
+
+#discover-text-banner {
+  background: red;
+  letter-spacing: 2rem;
+  width: 100%;
+}
+#discover-text-banner h1 {
+  position: absolute;
+  top: 30%;
+  font-size: 5rem;
+  width: 100%;
+  letter-spacing: 2rem;
+  opacity: 1;
+  font-weight: bold;
+  text-align: center;
+}
+#discover-text-banner h1 span{
+  font-weight: 200;
 }
 .signinBox{
   display: flex;
@@ -420,4 +637,13 @@ color:white;
   border: 2px solid rgba(0,0,0, .2);
   background: white;
   color: #2AABE2;
+}
+.create-project-form .discover-btn-2{
+  width: 200px;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  background: #2AABE2;
+  border-radius: 3px;
+  border: 2px solid rgba(0,0,0, .2);
+  color:white;
 }

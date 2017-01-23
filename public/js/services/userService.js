@@ -9,10 +9,9 @@ angular.module('discoverApp').service('userService', function($http, $q){
   }
 
   this.getUser = function(userAccount){
-
      return $http({
       method: 'POST',
-      url: "/api/user/accounts",
+      url: "/api/user/verify",
       data: userAccount
     })
   }
@@ -30,6 +29,15 @@ angular.module('discoverApp').service('userService', function($http, $q){
       url: "/api/user/connect"
     })
   }
+
+  this.createUser = function(newUser){
+     return $http({
+      method: 'POST',
+      url: "/api/user/createuser",
+      data: newUser
+    })
+  }
+
 
 
 

@@ -11,10 +11,105 @@
 .user-profile-bio{
   margin: 0px auto;
   padding: 20px;
-  width: 90%;
+  width: 75%;
+  min-width: 700px;
+}
+.user-profile-bio button{
+  float: right;
+  font-size: 1rem;
+  margin: 10px 5px;
+  background: white;
+  color: #2AABE2;
+  border: none;
+  border-bottom: 2px solid #2AABE2;
+  opacity: .7;
+}
+.user-profile-bio button:hover{
+    opacity: 1;
+}
+.user-activity-timeline{
+    margin: 0px auto;
+  padding: 20px;
+  width: 75%;
+  min-width: 700px;
+}
+.user-activity-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user-activity-header h1{
+  font-size: 4.4rem;
+  letter-spacing: .3rem;
+  width: 40%;
+  text-align: center;
+  /*border-bottom: 2px solid rgba(0,0,0, .1);*/
+  margin: 30px 0 20px 0;
+}
+.activity-post-id{
+  position: absolute;
+  top: -5px;
+  right:  -5px;
+  font-size: 1rem;
+  padding: 5px 15px;
+  background: #2AABE2;
+  color: white;
+  border: 2px solid #2AABE2;
+  font-weight: 400;
+  opacity: 1;
+}
+.user-activity-post{
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid rgba(0,0,0, .3)
+}
+.user-activity-link{
+  border-bottom: 2px solid rgba(0,0,0, .1);
+  margin: 10px;
+}
+.user-activity-link a{
+  color: #00597c;
+  text-decoration: none;
+}
+.user-activity-image{
+  width: 200px;
+  height: 200px;
+}
+.user-activity-info{
+  max-width: 600px;
+}
+.user-activity-info button{
+  float: right;
+  font-size: 1rem;
+  margin: 10px 5px;
+  background: white;
+  color: #2AABE2;
+  border: 2px solid #2AABE2;
+}
+.user-activity-info button:hover{
+  font-size: 1rem;
+  margin: 10px 5px;
+  background: #2AABE2;
+  color: white;
+  border: 2px solid #2AABE2;
+}
+.user-activity-info h3{
+  font-size: 3rem;
+  margin: 0 0 5px -20px;
+}
+.user-profile-bio{
+  margin-top: -20px;
+  border-bottom: 2px solid rgba(0,0,0, .1)
 }
 .user-profile-bio h2{
-margin: 10px -10px;
+margin: -10px -10px 10px 0;
+}
+.user-profile-bio h3{
+margin: 20px -10px 10px -10px;
 }
 .user-profile-head{
   display:flex;
@@ -23,8 +118,8 @@ margin: 10px -10px;
   padding: 20px 20px 0px 20px;
 }
 .user-profile-head .profile-picture{
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
 }
 .user-profile-crossection{
   height: auto;
@@ -41,10 +136,8 @@ margin: 10px -10px;
 
 .h-three-badges-div{
   border-bottom: 2px solid rgba(0,0,0, .1);
-  margin-bottom: 5px;
   display: flex;
   align-items: center;
-  height: 50px;
 }
 .user-profile-crossection h3{
   font-size: 1.2rem;
@@ -53,8 +146,10 @@ margin: 10px -10px;
   padding:3px;
 }
 .user-profile-crossection .h-three-badges{
+  padding-top: 5px;
     display: inline-block;
-      font-size: 2rem;
+      font-size: 1.2rem;
+      font-weight: 400;
 }
 .user-profile-crossection .h-three-badges{
   border-bottom: none;
@@ -70,6 +165,17 @@ margin: 10px -10px;
 .user-profile-crossection button:hover{
   background: #2AABE2;
   color: white;
+}
+.h-three-badges-div img{
+  width: 20px;
+}
+.badges-chevron{
+  opacity: .5;
+  transform: rotate(180deg);
+  margin-top: -3px;
+}
+.badges-chevron:hover{
+  opacity: 1;
 }
 .single-badge{
   display: flex;
@@ -115,6 +221,10 @@ font-size: .8rem;
 .company-profile-navbar ul{
   padding-top: 5px;
   margin-right: 10px;
+}
+.user-profile-crossection h1{
+  display: inline-block;
+  border-bottom: 2px solid rgba(0,0,0, .1)
 }
 .company-profile-navbar li{
   padding: 2px 15px 5px 15px;
