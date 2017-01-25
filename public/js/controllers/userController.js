@@ -1,4 +1,4 @@
-angular.module('discoverApp').controller('userController', function($rootScope,$scope, mainService, userService, $window){
+angular.module('discoverApp').controller('userController', function($http ,$rootScope,$scope, mainService, userService, $window){
 
 
 // create user section
@@ -8,7 +8,9 @@ $scope.createUserProfile = function(firstName, lastName, email, password, newUse
     $('.create-profile-form').hide()
     $('.create-profile-section h3').show()
     $('#field-prompt-5').hide()
-    userService.createUser(newUser)
+    userService.createUser(newUser).then(function(res){
+      window.location = 'http://localhost:3000/#/signin'
+    })
   }
    if(!firstName){
     $('#field-prompt-1').show()
@@ -53,7 +55,7 @@ $scope.getUser = function(userAccount){
       alert("wrong pass brotha")
     }else{
       $rootScope.currentUser = data
-      window.location = 'http://localhost:3000/#/userprofile'
+      window.location = 'http://localhost:3000/#/userprofile/newsfeed'
     }
   })
 }
@@ -62,6 +64,7 @@ $scope.getUser = function(userAccount){
 $scope.getUserConnect = function(){
   userService.getUserConnect().then(function(res){
     $scope.currentUser = res.data;
+    console.log(  $scope.currentUser)
     // $scope.currentUserCompanies = res.data[0].companies
     // $scope.githubUser = res.data[0].githubUsername
     // var data = res.data[0]
@@ -78,5 +81,47 @@ $scope.getUserConnect = function(){
 }
 
 $scope.getUserConnect();
+
+$scope.uploadProfilePic = function(){
+  var blobFile = $('#filechooser')[0].files[0];
+  var test = {blobFile: blobFile}
+  console.log(blobFile)
+  // var formData = new FormData();
+  // formData.append("fileToUpload", blobFile);
+
+  userService.imagetesting(test).then(function(res){
+    console.log('image test returned')
+  })
+
+
+}
+
+// profile updates
+$scope.newProfileimg = function(){
+
+ var newImg = prompt("type in image url (image from file comming soon...)")
+ if(newImg){
+   var email = $scope.currentUser.email
+   var imgUpdate = {image: newImg, email: email}
+  userService.newProfileimg(imgUpdate).then(function(res){
+    console.log("yolo hello")
+    location.reload();
+  })
+ }
+}
+$scope.newUserBio = function(){
+     $('#newUserBio').show()
+     $('.save-user-bio').show()
+}
+$scope.saveUserBio = function(){
+     $('#newUserBio').hide()
+     $('.save-user-bio').hide()
+     var newUserBio = $('#newUserBio').val()
+     var email = $scope.currentUser.email
+     var userBioUpdate = {userbio: newUserBio, email: email }
+     userService.saveUserBio(userBioUpdate).then(function(res){
+       location.reload();
+     })
+}
 
 })

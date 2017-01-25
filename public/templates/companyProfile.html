@@ -9,8 +9,9 @@
   </ul>
 </div>
 <section class="user-profile-head">
-    <div class="profile-picture" style="background: url('{{currentUser.profileImage}}'); background-size:cover; background-position: center center;"></div>
-
+    <div class="profile-picture" style="background: url('{{currentUser.profileImage}}'); background-size:cover; background-position: center center;">
+      <button class="change-profile-img" ng-click="newProfileimg()">Change</button>
+    </div>
   <div class="user-profile-crossection">
     <div>
       <h1> {{currentUser.name}}</h1>

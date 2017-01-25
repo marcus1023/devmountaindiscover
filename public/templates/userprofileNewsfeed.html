@@ -1,0 +1,13 @@
+<p>NEWSFEED</p>
+<div class="user-activity-post" ng-repeat="activity in currentUser.timelineData">
+  <div class="activity-post-id">{{activity.type}}</div>
+  <div class="user-activity-image" style="background: url('{{activity.image}}'); background-size:cover;background-position:center center  ; ">
+  </div>
+  <div class="user-activity-info">
+    <h3 class="user-activity-title">{{activity.title}}</h3>
+    <span class="user-activity-discription">{{activity.disc}}</span><br>
+    <p class="user-activity-link">Link: <a href="{{activity.link}}">{{activity.linkTitle}}</a></p>
+    <p class="user-activity-link">{{activity.dateAdded}}</p>
+    <a href="{{activity.link}}"><button>View Project</button></a>
+  </div>
+</div>

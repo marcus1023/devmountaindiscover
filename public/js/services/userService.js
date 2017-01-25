@@ -7,7 +7,21 @@ angular.module('discoverApp').service('userService', function($http, $q){
       url: "/api/user/accounts"
     })
   }
-
+  // update user profiles
+  this.newProfileimg = function(imgUpdate){
+    return $http({
+      method: 'POST',
+      url: "/api/user/profileimgUpdate",
+      data: imgUpdate
+    })
+  }
+  this.saveUserBio = function(userBioUpdate){
+    return $http({
+      method: 'POST',
+      url: "/api/user/saveUserBio",
+      data: userBioUpdate
+    })
+  }
   this.getUser = function(userAccount){
      return $http({
       method: 'POST',
@@ -35,6 +49,13 @@ angular.module('discoverApp').service('userService', function($http, $q){
       method: 'POST',
       url: "/api/user/createuser",
       data: newUser
+    })
+  }
+  this.imagetesting = function(blobFile){
+     return $http({
+      method: 'POST',
+      url: "/api/user/imagetesting",
+      data: blobFile
     })
   }
 

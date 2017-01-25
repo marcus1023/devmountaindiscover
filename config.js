@@ -1,3 +1,4 @@
 module.exports = {
-	sessionSecret: 'ksfydrtegfdtrewrfdg5'
+	sessionSecret: 'ksfydrtegfdtrewrfdg5',
+	temp: ''
 };

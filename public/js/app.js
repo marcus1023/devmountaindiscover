@@ -41,6 +41,16 @@ angular.module('discoverApp',  ['ui.router'])
             templateUrl: "../templates/userprofile.html",
             controller: "userController"
         })
+        .state('userprofile.newsfeed',{
+            url:'/newsfeed',
+            templateUrl: "../templates/userprofileNewsfeed.html",
+            controller: "userController"
+        })
+        .state('userprofile.timeline',{
+            url:'/timeline',
+            templateUrl: "../templates/userprofileTimeline.html",
+            controller: "userController"
+        })
         .state('companyProfile',{
             url:'/companyProfile',
             templateUrl: "../templates/companyProfile.html",
@@ -74,6 +84,11 @@ angular.module('discoverApp',  ['ui.router'])
         .state('LItest',{
             url:'/LItest',
             templateUrl: "templates/linkedinTestingPage.html",
+            controller: "linkedinController"
+        })
+        .state('s3phototester',{
+            url:'/s3phototester',
+            templateUrl: "templates/s3phototester.html",
             controller: "linkedinController"
         })
 

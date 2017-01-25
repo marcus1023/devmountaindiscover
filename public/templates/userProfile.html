@@ -9,75 +9,44 @@
   </ul>
 </div>
 <section class="user-profile-head">
-  <div class="profile-picture" style="background: url('{{currentUser.profileImage}}'); background-size:cover; background-position: center center;"></div>
+  <div class="profile-picture" style="background: url('{{currentUser.profileimage}}'); background-size:cover; background-position: center center;">
+    <button class="change-profile-img" ng-click="newProfileimg()">Change</button>
+  </div>
   <div class="user-profile-crossection">
-    <div>
+    <div class="user-stats-info">
       <h1> {{currentUser.name}}</h1>
       <div class="h-three-badges-div">
         <h3 class="h-three-badges">Badges: {{currentUser.badge}}/6</h3><img class="badges-chevron"src="../img/ChevronLeft-128.png">
-        <!-- <div class="single-badge">
-          <img src="../img/htmlBadgeComplete.png">
-          <span>html / css</span>
-        </div>
-        <div class="single-badge">
-          <img src="../img/htmlBadgeComplete.png">
-          <span>Javascript</span>
-        </div>
-        <div class="single-badge">
-          <img src="../img/htmlBadgeComplete.png">
-          <span>Javascript 2</span>
-        </div>
-        <div class="single-badge" style="opacity: .5;">
-          <img src="../img/angularBadgePending.png">
-          <span>Angular JS</span>
-        </div>
-        <div class="single-badge" style="opacity: .5;">
-          <img src="../img/nodeBadgePending.png">
-          <span>Node JS</span>
-        </div>
-        <div class="single-badge" style="opacity: .5;">
-          <img src="../img/angularBadgePending.png">
-          <span>SQL Server</span>
-        </div> -->
         </div>
       <h3>Projects Completed: {{currentUser.ProjectsCompleted}}</h3>
-      <h3 class="test">Gethub Repos: {{currentUserGitRepos}}</h3>
-      <h3 class="progress-title">Class Progress: {{currentUser.progress}}%</h3>
-      <div class="current-user-progress">
-        <div style="width: {{currentUser.progress}}%"></div>
-      </div>
-
-      <button>Employer Projects</button>
-      <button> Portfolio</button>
+      <h3 class="test">Github Repos: {{currentUser.gitrepos}}</h3>
     </div>
+    <section class="user-profile-bio">
+      <h2>About {{currentUser.firstName}}</h2>
+      <span>{{currentUser.userbio}}</span><br>
+      <textarea placeholder="Tell us about yourself...  "id="newUserBio">{{currentUser.userbio}}</textarea><br>
+      <button class="change-user-bio" ng-click="newUserBio()">Change</button>
+      <button class="save-user-bio" ng-click="saveUserBio()">Save</button>
+    </section>
   </div>
 </section>
-
-
-<section class="user-profile-bio">
-  <h2>About {{currentUser.firstName}}</h2>
-  <span>Squashy armchairs dirt on your nose brass scales crush the Sopophorous bean with flat side of silver dagger, releases juice better than cutting. Full moon Whomping Willow three turns should do it lemon drops. Locomotor trunks owl treats that will be 50 points, Mr. Potter. Witch Weekly, he will rise again and he will come for us, headmaster Erumpent horn.</span><br>
-  <button>Contact Nathan</button>
-  <!-- <h3> {{currentUser.firstName}}'s Experiance</h3>
-<span class="test">
-  Hedwig Daily Prophet treacle tart full-moon Ollivanders You-Know-Who cursed. Fawkes maze raw-steak Voldemort Goblin Wars snitch Forbidden forest grindylows wool socks. </span> -->
-</section>
 <section class="user-activity-header">
+  <div class="user-progress-section">
+    <h3 class="progress-title">Class Progress: {{currentUser.progress}}%</h3>
+    <div class="current-user-progress">
+      <div style="width: {{currentUser.progress}}%"></div>
+    </div>
+  </div>
+  <div class="choose-timeline-state">
+    <button ui-sref="userprofile.newsfeed">NewsFeed</button>
+    <button ui-sref="userprofile.timeline"> Timeline</button>
+  </div>
   <h1>Timeline</h1>
 </section>
 <section class="user-activity-timeline">
-  <div class="user-activity-post" ng-repeat="activity in currentUser.projectData">
-    <div class="activity-post-id">{{activity.type}}</div>
-    <div class="user-activity-image" style="background: url('{{activity.image}}'); background-size:cover;background-position:center center  ; ">
-    </div>
-    <div class="user-activity-info">
-      <h3 class="user-activity-title">{{activity.title}}</h3>
-      <span class="user-activity-discription">{{activity.disc}}</span><br>
-      <p class="user-activity-link">Link: <a href="{{activity.link}}">{{activity.linkTitle}}</a></p>
-      <p class="user-activity-link">{{activity.dateAdded}}</p>
-      <a href="{{activity.link}}"><button>View Project</button></a>
-    </div>
-  </div>
+  <ui-view>
+  </ui-view>
+
 </section>
 
 </section>
