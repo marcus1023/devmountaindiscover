@@ -1,13 +1,6 @@
 <div ng-controller="mainController">
 <section class="user-profile-section">
-<div class="top-spacer"></div>
-<div class="company-profile-navbar">
-  <ul>
-    <li>New Project...</li>
-    <li>Employers</li>
-    <li>inbox </li>
-  </ul>
-</div>
+<student-head></student-head>
 <section class="user-profile-head">
   <div class="profile-picture" style="background: url('{{currentUser.profileimage}}'); background-size:cover; background-position: center center;">
     <button class="change-profile-img" ng-click="newProfileimg()">Change</button>
@@ -16,10 +9,10 @@
     <div class="user-stats-info">
       <h1> {{currentUser.name}}</h1>
       <div class="h-three-badges-div">
-        <h3 class="h-three-badges">Badges: {{currentUser.badge}}/6</h3><img class="badges-chevron"src="../img/ChevronLeft-128.png">
+        <h3 class="h-three-badges">Badges: {{currentUser.badge}}</h3>
         </div>
       <h3>Projects Completed: {{currentUser.ProjectsCompleted}}</h3>
-      <h3 class="test">Github Repos: {{currentUser.gitrepos}}</h3>
+      <h3 class="githubH3">Github Repos: {{currentUser.gitrepos}}<button id="githubConnect" ui-sref="githubConnect">Connect github</button></h3>
     </div>
     <section class="user-profile-bio">
       <h2>About {{currentUser.firstName}}</h2>
@@ -41,7 +34,6 @@
     <button ui-sref="userprofile.newsfeed">NewsFeed</button>
     <button ui-sref="userprofile.timeline"> Timeline</button>
   </div>
-  <h1>Timeline</h1>
 </section>
 <section class="user-activity-timeline">
   <ui-view>

@@ -1,7 +1,7 @@
-<employer-head></employer-head>
+<student-head></student-head>
 <section class="create-profile-section">
-  <h1>Create New Project</h1>
-  <h2>{{currentUser.lastname}}</h2>
+  <h1>Create New Profile Piece</h1>
+  <h2>{{currentUser.name}} {{currentUser.lastname}}</h2>
   <form class="create-project-form" id="project-form">
     <input type="text" placeholder="Project Title..." ng-model="project.title"></input>
     <textarea name="comment" form="project-form" placeholder="Project Discription..." ng-model="project.disc"></textarea>
@@ -9,16 +9,16 @@
     <input type="text"placeholder="Github Link" ng-model="project.githublink" ></input>
     <input type="text"placeholder="Image URL" ng-model="project.image" ></input>
     <input type="submit"  class="discover-btn-2" ng-click="createProject(project)"/>
-    <!-- <p id="skill-highlight-title">Select Required Skills</p> -->
+    <p id="skill-highlight-title">Select Used Skills</p>
     <div class="project-type-select slideOne">
       <div class="inner-slide">
-        <input type="checkbox" value="None" id="slideOne" name="check" checked ng-model="project.html5"/>HTML5
+        <input type="checkbox" value="false" data-val="html5" id="slideOne" name="check" checked ng-model="project.html5"/>HTML5
         <label for="slideOne"></label>
       </div>
     </div>
     <div class="project-type-select slideTwo">
       <div class="inner-slide">
-        <input type="checkbox" value="None" id="slideTwo" checked ng-model="project.css"/>CSS
+        <input type="checkbox" value="css" data-val="css"  id="slideTwo" checked ng-model="project.css"/>CSS
         <label for="slideTwo"></label>
       </div>
     </div>

@@ -1,6 +1,47 @@
+input:focus {
+    outline:none;
+}
 .top-spacer{
+  /*position: fixed;*/
   height: 50px;
   width: 100%;
+}
+.user-search-btn{
+  opacity: .5;
+  margin:  0 0 -20px 0;
+  display: inline-block;
+  width: 85px;
+  height: 80px;
+  /*border: 1px solid rgba(0,0,0, .1);*/
+  background: url('/img/mag-glass.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 75%;
+  border-bottom: 3px solid rgba(	42,	171,	226, 1);
+  transition: all 1s;
+}
+.user-search-btn:hover{
+  opacity: .6;
+  background: url('/img/mag-glass.png') , rgba(0,0,0, .06);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 75%;
+  border-bottom: 3px solid rgba(	42,	171,	226, .9);
+}
+.user-search-btn img{
+  width: 20px;
+}
+.user-search{
+  display: inline-block;
+  width: 85%;
+  padding: 10px 15px;
+  font-size: 4rem;
+  border: none;
+  border-bottom:3px solid rgba(	42,	171,	226, .5);
+}
+.user-search::-webkit-input-placeholder {
+font-weight: 200;
+color: rgba(0,0,0, .5)
 }
 .user-profile-section{
   width: 100%;
@@ -48,6 +89,27 @@
   border: 1px solid rgba(0,0,0, 1);
   opacity: .8;
 }
+.activity-feed-banner{
+  padding: 10px;
+  background: rgba(	42,	171,	226, .1);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 80% 10px -200px;
+  border-bottom: 2px solid rgba(	42,	171,	226, .1);
+}
+.activity-feed-title{
+      margin: 0 0 10px -60px;
+      letter-spacing: 1rem;
+      border-bottom: 1px solid rgba(0,0,0, .3);
+  font-weight: 500;
+  font-size: 2rem;
+  opacity: .4;
+  z-index: 0 !important;
+}
+.search-results-section{
+  height: 100vh;
+}
 .user-activity-timeline{
     margin: 0px auto;
   padding: 20px;
@@ -57,6 +119,8 @@
 .choose-timeline-state{
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 20vh;
 }
 .choose-timeline-state button{
   float: right;
@@ -83,8 +147,12 @@
   width: 100%;
 }
 .user-progress-section{
-  margin: 20px 0 10px 0;
+  margin: -10px 0 10px 0;
   width: 80%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .progress-title{
   margin: 0 0 5px 0;
@@ -114,13 +182,19 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
-  padding: 10px;
+  padding: 20px 0 5px 0;
   margin-bottom: 10px;
+  background: rgba(255,255,255, .8);
   border: 2px solid rgba(0,0,0, .3)
 }
 .user-activity-link{
+  padding: 10px;
   border-bottom: 2px solid rgba(0,0,0, .1);
   margin: 10px;
+}
+.user-activity-link-2{
+  border-bottom: none;
+  padding-left: 10px;
 }
 .user-activity-link a{
   color: #00597c;
@@ -131,18 +205,21 @@
   height: 200px;
 }
 .user-activity-info{
-  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
 }
 .user-activity-info button{
   float: right;
-  font-size: 1rem;
+  display: inline-block;
+  font-size: .8rem;
   margin: 10px 5px;
   background: white;
   color: #2AABE2;
   border: 2px solid #2AABE2;
 }
 .user-activity-info button:hover{
-  font-size: 1rem;
+  font-size: .8rem;
   margin: 10px 5px;
   background: #2AABE2;
   color: white;
@@ -151,6 +228,43 @@
 .user-activity-info h3{
   font-size: 3rem;
   margin: 0 0 5px -20px;
+}
+.user-activity-info p{
+  font-size: 1rem;
+  margin: 0 0 5px -20px;
+}
+.user-activity-command{
+  align-items: center;
+  justify-content: flex-end;
+  display: flex;
+  width: 100%;
+}
+.user-activity-tags{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-size: .6rem;
+  font-weight: 500;
+  /*width: 40%;*/
+  border-bottom: 1px solid rgba(0,0,0, .2);
+}
+.user-activity-tags span{
+ margin: 0 10px 0 0;
+}
+.user-activity-tags span:hover{
+ opacity: .6;
+}
+#activity-tag-title{
+  margin: 0 5px 0 0;
+  font-weight: 700;
+}
+.user-activity-command ul{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.user-activity-command li a{
+  width: 140px;
 }
 .user-profile-bio{
   position: relative;
@@ -242,6 +356,16 @@ margin: 20px -10px 10px -10px;
   margin-bottom: 5px;
   padding:3px;
 }
+.githubH3{
+  display: flex;
+  align-items: center;
+}
+.githubH3 button{
+  margin-left: 10px;
+}
+#githubConnect{
+  display: none;
+}
 .user-stats-info{
   width: 300px;
 }
@@ -298,15 +422,25 @@ font-size: .8rem;
   color: white;
 }
 .company-profile-navbar{
+  position: fixed;
+  top: 0;
   font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  height: 40px;
-  background: rgba(0,0,0, .1);
+  background-color: #262626;
+  height: 55px;
+  border-bottom: 1px solid #00AEEF;
   width: 100%;
+  z-index: 100;
+}
+.company-profile-navbar img{
+  position: absolute;
+  width: 200px;
+  left: 20px;
 }
 .company-profile-navbar ul{
+  color: white;
   padding-top: 5px;
   margin-right: 10px;
 }
@@ -322,7 +456,7 @@ font-size: .8rem;
 .company-profile-navbar li:hover{
   padding: 2px 15px 5px 15px;
   display: inline-block;
-  border-bottom: 1px solid rgba(0,0,0, .3);
+  border-bottom: 1px solid rgba(255,255,255, .3);
 }
 
 .current-user-progress{
@@ -360,4 +494,39 @@ padding: 0px 10px;
 .user-company-box{
 padding: 2px 0px 5px 0px;
   background: #f1f1f1;
+}
+.not-student p{
+color: #2AABE2 !important;
+opacity: .7;
+}
+.not-student p:hover{
+color: #2AABE2;
+opacity: 1;
+}
+.border-b{
+  opacity: .7;
+  border-bottom: 1px solid #2AABE2;
+  padding: 10px;
+  margin: 10px;
+}
+#Invite-section{
+  display: none;
+  width: 500px;
+  /*border-top: 1px solid rgba(0,0,0, .1);*/
+  margin: 10px 0 0 0;
+}
+#Invite-section h2{
+  width: 250px;
+  opacity: .5;
+  margin: 10px 0 10px 0px;
+  font-size: 2rem;
+  padding: 0 0 5px 0;
+  border-bottom: 1px solid rgba(0,0,0, .5);
+}
+#Invite-section p{
+  margin: 0 0 20px 15px;
+  opacity: .6;
+}
+#wrong-invite{
+  display: none;
 }

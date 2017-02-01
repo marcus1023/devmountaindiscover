@@ -1,0 +1,75 @@
+<div ng-controller="mainController">
+<section class="user-profile-section">
+<student-head ng-hide="currentUser.acctype === 'Employer'"></student-head>
+<employer-head ng-hide="currentUser.acctype === 'Student'"></employer-head>
+<section class="user-profile-head">
+  <div class="profile-picture" style="background: url('{{currentUser.outfacingUser.profileimage}}'); background-size:cover; background-position: center center;">
+    <button class="change-profile-img" ng-hide="currentUser.id !== currentUser.outfacingUser.id" ng-click="newProfileimg()">Change</button>
+  </div>
+  <div class="user-profile-crossection">
+    <div class="user-stats-info">
+      <h1> {{currentUser.outfacingUser.name}}</h1>
+      <div class="h-three-badges-div">
+        <h3 class="h-three-badges">Badges: {{currentUser.outfacingUser.badge}}</h3>
+        </div>
+      <h3>Projects Completed: {{currentUser.outfacingUser.ProjectsCompleted}}</h3>
+      <h3 class="githubH3">Github Repos: {{currentUser.outfacingUser.gitrepos}}<button ng-hide="currentUser.id !== currentUser.outfacingUser.id" id="githubConnect" ui-sref="githubConnect">Connect github</button></h3>
+    </div>
+    <section class="user-profile-bio">
+      <h2>About {{currentUser.outfacingUser.firstName}}</h2>
+      <span>{{currentUser.outfacingUser.userbio}}</span><br>
+      <textarea placeholder="Tell us about yourself...  "id="newUserBio">{{currentUser.outfacingUser.userbio}}</textarea><br>
+      <button class="change-user-bio" ng-hide="currentUser.id !== currentUser.outfacingUser.id" ng-click="newUserBio()">Change</button>
+      <button class="save-user-bio" ng-click="saveUserBio()">Save</button>
+    </section>
+  </div>
+</section>
+<section class="user-activity-header">
+  <div class="user-progress-section">
+    <h3 class="progress-title">Class Progress: {{outfacingUser.progress}}%</h3>
+    <div class="current-user-progress">
+      <div style="width: {{outfacingUser.progress}}%"></div>
+    </div>
+  </div>
+  <div class="choose-timeline-state">
+  </div>
+  <h1>Timeline</h1>
+</section>
+<section class="user-activity-timeline">
+  <ui-view>
+  </ui-view>
+
+
+  <p class="activity-feed-title">TIMELINE</p>
+  <div class="user-activity-post" ng-repeat="activity in currentUser.outfacingUser.projectData" activity-tags>
+    <div class="activity-post-id">{{activity.type}}</div>
+    <div class="user-activity-image" style="background: url('{{activity.image}}'); background-size:cover;background-position:center center  ; ">
+    </div>
+    <div class="user-activity-info">
+      <h3 class="user-activity-title">{{activity.title}}</h3>
+      <p class="user-activity-discription">{{activity.disc}}</p><br>
+      <p class="user-activity-link">Link: <a href="{{activity.link}}">{{activity.link}}</a></p>
+      <p class="user-activity-link-2">{{activity.dateAdded}}Jan 7th 2017</p>
+      <div class="user-activity-command">
+        <ul>
+          <li>
+            <a href="{{activity.link}}"><button >View {{activity.type}}</button></a>
+          </li>
+          <li>
+            <a><button id="add-to-queue" ng-hide="currentUser.acctype === 'Employer' || currentUser.projectData[0].type === 'Profile Piece'" ng-click="testing(currentUser.projectData[0].type)">Add to queue</button></a>
+            <a><button id="add-to-queue" ng-hide="currentUser.acctype === 'Student'" ng-click="saveUser(currentUser.outfacingUser.id)" >Save Student</button></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="user-activity-tags">
+      <span id="activity-tag-title">Tags:   </span>
+      <span id="activity-tag-html" ng-hide="!activity.html" >{{activity.html}} </span>
+      <span id="activity-tag-css" ng-hide="!activity.css" >{{activity.css}} </span>
+      <span id="activity-tag-angular" ng-hide="!activity.angular">{{activity.angular}} </span>
+      <span id="activity-tag-node"  ng-hide="!activity.node" >{{activity.node}} </span>
+      <span id="activity-tag-database" ng-hide="!activity.database">{{activity.database}} </span>
+    </div>
+  </div>
+
+</div>

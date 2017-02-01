@@ -1,0 +1,19 @@
+<employer-head ng-hide="currentUser.acctype === 'Student'"></employer-head>
+<student-head ng-hide="currentUser.acctype === 'Employer'"></student-head>
+<student-popup style="display:none;"></student-popup>
+<section class="student-lineup-section">
+  <div class="student-lineup-container">
+    <h1>Devmountain Developers</h1>
+    <div class="student-lineup-current">
+      <div class="single-student" ng-repeat="student in currentUser.allStudents">
+        <div class="single-student-image" style="background: url('{{student.profileimage}}'); background-position: center; background-size: cover;"></div>
+        <h3>{{student.name}} {{student.lastname}}</h3>
+        <span class="student-quick-view" ng-click="goToStudentQuick(student.id)" >Quick View <img src="./img/ChevronLeft-128.png"></span>
+        <div class="single-student-control">
+          <button class="discover-btn-small" ng-click="goToStudent(student.id)" >Profile</button>
+          <button class="discover-btn-small">Projects</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

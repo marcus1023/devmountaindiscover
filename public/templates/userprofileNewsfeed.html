@@ -1,13 +1,32 @@
-<p>NEWSFEED</p>
-<div class="user-activity-post" ng-repeat="activity in currentUser.timelineData">
+
+<p class="activity-feed-title">NEWSFEED</p>
+<div class="user-activity-post" ng-repeat="activity in currentUser.projectData" activity-tags>
   <div class="activity-post-id">{{activity.type}}</div>
   <div class="user-activity-image" style="background: url('{{activity.image}}'); background-size:cover;background-position:center center  ; ">
   </div>
   <div class="user-activity-info">
     <h3 class="user-activity-title">{{activity.title}}</h3>
-    <span class="user-activity-discription">{{activity.disc}}</span><br>
-    <p class="user-activity-link">Link: <a href="{{activity.link}}">{{activity.linkTitle}}</a></p>
-    <p class="user-activity-link">{{activity.dateAdded}}</p>
-    <a href="{{activity.link}}"><button>View Project</button></a>
+    <p class="user-activity-discription">{{activity.disc}}</p><br>
+    <p class="user-activity-link">Link: <a href="{{activity.link}}">{{activity.link}}</a></p>
+    <p class="user-activity-link-2">{{activity.dateAdded}}Jan 7th 2017</p>
+    <div class="user-activity-command">
+      <ul>
+        <li>
+          <a href="{{activity.link}}"><button >View {{activity.type}}</button></a>
+        </li>
+        <li>
+          <a><button id="add-to-queue" ng-hide="currentUser.acctype === 'Employer' || currentUser.projectData[0].type === 'Profile Piece'" ng-click="testing(currentUser.projectData[0].type)">Add to queue</button></a>
+          <a><button id="add-to-queue" ng-hide="currentUser.acctype === 'Student'" >Save Student</button></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="user-activity-tags">
+    <span id="activity-tag-title">Tags:   </span>
+    <span id="activity-tag-html" >{{activity.html}} </span>
+    <span id="activity-tag-css" >{{activity.css}} </span>
+    <span id="activity-tag-angular" >{{activity.angular}} </span>
+    <span id="activity-tag-node" >{{activity.node}} </span>
+    <span id="activity-tag-database" >{{activity.database}} </span>
   </div>
 </div>

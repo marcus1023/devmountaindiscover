@@ -31,14 +31,29 @@ angular.module('discoverApp',  ['ui.router'])
             templateUrl: "../templates/createProfile.php",
             controller: "userController"
         })
+        .state('createEmployerProfile',{
+            url:'/createEmployerProfile',
+            templateUrl: "../templates/createEmployerProfile.html",
+            controller: "userController"
+        })
         .state('newProject',{
             url:'/newProject',
             templateUrl: "../templates/newProject.php",
             controller: "projectController"
         })
+        .state('newProfilePiece',{
+            url:'/newProfilePiece',
+            templateUrl: "../templates/newProfilePiece.html",
+            controller: "projectController"
+        })
         .state('userprofile',{
             url:'/userprofile',
             templateUrl: "../templates/userprofile.html",
+            controller: "userController"
+        })
+        .state('githubConnect',{
+            url:'/githubConnect',
+            templateUrl: "../templates/githubConnect.html",
             controller: "userController"
         })
         .state('userprofile.newsfeed',{
@@ -47,6 +62,16 @@ angular.module('discoverApp',  ['ui.router'])
             controller: "userController"
         })
         .state('userprofile.timeline',{
+            url:'/timeline',
+            templateUrl: "../templates/userprofileTimeline.html",
+            controller: "userController"
+        })
+        .state('companyProfile.newsfeed',{
+            url:'/newsfeed',
+            templateUrl: "../templates/userprofileNewsfeed.html",
+            controller: "userController"
+        })
+        .state('companyProfile.timeline',{
             url:'/timeline',
             templateUrl: "../templates/userprofileTimeline.html",
             controller: "userController"
@@ -60,6 +85,11 @@ angular.module('discoverApp',  ['ui.router'])
             url:'/employerInfo',
             templateUrl: "../templates/employerInfo.html",
             controller: "employerController"
+        })
+        .state('studentLineup',{
+          url:"/studentLineup",
+          templateUrl: "../templates/students/student-lineup.html",
+          controller: "userController"
         })
         .state('james',{
             url:'/james',
@@ -84,12 +114,22 @@ angular.module('discoverApp',  ['ui.router'])
         .state('LItest',{
             url:'/LItest',
             templateUrl: "templates/linkedinTestingPage.html",
+            controller: "userController"
+        })
+        .state('timertempl',{
+            url:'/timertempl',
+            templateUrl: "templates/timertempl.html",
             controller: "linkedinController"
         })
-        .state('s3phototester',{
-            url:'/s3phototester',
-            templateUrl: "templates/s3phototester.html",
-            controller: "linkedinController"
+        .state('outfacingStudent',{
+            url:'/outfacingStudent',
+            templateUrl: "templates/students/outfacing-student.html",
+            controller: "userController"
+        })
+        .state('searchresults',{
+            url:'/searchresults',
+            templateUrl: "templates/search-results.html",
+            controller: "userController"
         })
 
 

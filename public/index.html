@@ -11,31 +11,26 @@
     <link rel="stylesheet" href="./style/homepage.css">
     <link rel="shortcut icon" href="https://course_report_production.s3.amazonaws.com/rich/rich_files/rich_files/820/s200/dev-mountain-logo.png">
     <script src="./js/firebaseMainJs.js"></script>
+    <!-- CSS TOPIC SPECIFIC LINKS BEGIN -->
+    <link rel="stylesheet" href="./style/responcive/user-activity.css">
+    <link rel="stylesheet" href="./style/public-view.css">
+    <link rel="stylesheet" href="./style/popup.css">
+    <!-- CSS TOPIC SPECIFIC LINKS END -->
 </head>
 <body>
   <main role="main" ng-controller="linkedinController">
-    <header>
-      <div class="nav-bar">
-        <img ui-sref="home" src="img/discover-logo.png">
-        <ul>
-          <li ui-sref="sSignUp">Students</li>
-          <li ui-sref="eSignUp">employers</li>
-          <li ui-sref="mainSignUp" id="create-account">create account</li>
-          <li ui-sref="signin" >Sign in </li>
-        </ul>
-      </div>
-    </header>
-      <ui-view></ui-view>
-    </main>
-    <footer>
-      <ul>
-        <li>About</li>
-        <li>-</li>
-        <li>Devmountain Site</li>
-        <li>-</li>
-        <li>Contact</li>
-      </ul>
-    </footer>
+    <ui-view></ui-view>
+  </main>
+  <footer>
+    <ul>
+      <li>About</li>
+      <li>-</li>
+      <li>Devmountain Site</li>
+      <li>-</li>
+      <li>Contact</li>
+    </ul>
+  </footer>
+</body>
 <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
 <script src="./js/firebaseMainJs.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js"></script>
@@ -57,4 +52,9 @@
 <script src="./js/services/projectService.js"></script>
 <script src="./js/controllers/linkedinController.js"></script>
 <script src="./js/services/linkedinService.js"></script>
+<script src="./js/directives/main-head-directive.js"></script>
+<script src="./js/directives/employer-head.js"></script>
+<script src="./js/directives/student-header.js"></script>
+<script src="./js/directives/show-activity-tags.js"></script>
+<script src="./js/directives/student-popup.js"></script>
 </html>

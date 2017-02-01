@@ -1,10 +1,17 @@
-angular.module('discoverApp').service('userService', function($http, $q){
+angular.module('discoverApp').service('userService', function($rootScope, $http, $q){
 
 
-  this.getUsers = function(){
+
+  this.linkedinOauth = function(){
     return $http({
       method: 'GET',
-      url: "/api/user/accounts"
+      url: "/auth/linkedin"
+    })
+  }
+  this.getAllStudents = function(){
+    return $http({
+      method: 'GET',
+      url: "/api/user/getAllStudents"
     })
   }
   // update user profiles
@@ -22,6 +29,41 @@ angular.module('discoverApp').service('userService', function($http, $q){
       data: userBioUpdate
     })
   }
+  this.gitHubConnect = function(githubUser, email){
+    var defer = $q.defer();
+    let githubUserUpdate = {githubUser: githubUser, email: email}
+
+     $http({
+      method: 'GET',
+      url: "https://api.github.com/users/" + githubUser
+    }).then(function(res){
+      githubUserUpdate.repos = res.data.public_repos
+      // console.log( res.data.public_repos)
+      $http({
+       method: 'POST',
+       url:'/api/user/githubUserUpdate',
+       data: githubUserUpdate
+     })
+      defer.resolve(res)
+    })
+  return  defer.promise
+  }
+
+// user connect  calls
+  this.getUserConnect = function(){
+    return $http({
+      method: 'GET',
+      url: "/api/user/connect"
+    })
+  }
+  this.getUserProjects = function(data){
+    var newData = {data:data}
+    return $http({
+      method: 'POST',
+      url: "/api/user/getUserProjects",
+      data: newData
+    })
+  }
   this.getUser = function(userAccount){
      return $http({
       method: 'POST',
@@ -29,21 +71,20 @@ angular.module('discoverApp').service('userService', function($http, $q){
       data: userAccount
     })
   }
-
-  this.githubUser = function(githubUser){
+  this.goToStudent = function(id){
     return $http({
-      method: 'GET',
-      url: "https://api.github.com/users/" + githubUser
-    })
+     method: 'POST',
+     url: "/api/user/goToStudent",
+     data: id
+   })
   }
-
-  this.getUserConnect = function(){
+  this.goToStudentConnect = function(){
     return $http({
-      method: 'GET',
-      url: "/api/user/connect"
-    })
+     method: 'GET',
+     url: "/api/user/goToStudentConnect"
+   })
   }
-
+// user creation reqs
   this.createUser = function(newUser){
      return $http({
       method: 'POST',
@@ -51,14 +92,29 @@ angular.module('discoverApp').service('userService', function($http, $q){
       data: newUser
     })
   }
-  this.imagetesting = function(blobFile){
-     return $http({
-      method: 'POST',
-      url: "/api/user/imagetesting",
-      data: blobFile
-    })
-  }
+//save user
+this.saveUser = function(userid){
+  var user = {id: userid}
+  console.log(user)
+  return $http({
+   method: 'POST',
+   url: "/api/user/saveUser",
+   data: user
+ })
+}
 
+// User Type Dependencies
+
+this.userTypeDependencies = function(data){
+  let type = data.acctype
+  if(type === "Student"){
+    console.log(data.name + " is a " + type)
+    $('#add-to-queue').show();
+  }else if (type === "Employer"){
+    console.log(data.lastname + " is an " + type)
+    $('#save-student').show();
+  }
+}
 
 
 

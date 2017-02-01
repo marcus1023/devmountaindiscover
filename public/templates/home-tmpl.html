@@ -1,4 +1,6 @@
 <section class="top-video-section">
+<main-head></main-head>
+
 <div class="fullscreen-bg">
     <video loop muted autoplay poster="img/dev-mountain-true-img.png" class="fullscreen-bg__video">
         <source src="img/dev-mountain-true.mp4" type="video/mp4">
@@ -8,14 +10,12 @@
       <h3>Discover</h3>
       <div class="video-section-widgets">
         <span>Get Started</span>
-        <div><button ui-sref="eSignUp">Student</button>
-        <button ui-sref="sSignUp">Employer</button></div>
+        <div><button ui-sref="sSignUp">Student</button>
+        <button ui-sref="eSignUp">Employer</button></div>
       </div>
     </div>
 </div>
-
 </section>
-
 <section class="funnel-options-section">
   <h1>Innovative by design</h1>
   <span>Discover how our innovative full emersion program produces the best in the business</span>
@@ -32,7 +32,7 @@
       <h3>Projects created to simulate employer demands</h3>
       <span>Read more</span>
     </div>
-    <div class="funnel-option">
+    <div ui-sref="mainSignUp" class="funnel-option">
       <img src="img/profiles.png">
       <h2>Create Profile</h2>
       <h3>Become part of the community today!</h3>

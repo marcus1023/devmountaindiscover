@@ -1,0 +1,35 @@
+.student-popup-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 55px;
+  width: 100%;
+  height: 90vh;
+  background: rgba(0,0,0, .4)
+}
+.student-popup-inner{
+  position: relative;
+  width:85%;
+  height: 80vh;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.student-popup-inner header{
+  display: flex;
+  align-items: center;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  height: 50px;
+  background: #2AABE2;
+}
+.student-popup-inner header h2{
+  color: white;
+  margin: 5px 10px;
+}
+.student-popup-main{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}

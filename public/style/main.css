@@ -449,10 +449,18 @@ textarea{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
 }
 .create-profile-section h1{
-  margin: 0 0 20px 0;
+  font-size: 1.8rem;
+  color: #2AABE2;
+  margin: 10px 0 10px 0;
+}
+.create-profile-section h2{
+  font-size: 4.3rem;
+  opacity: .5;
+  margin: 0px 0 20px 0;
 }
 .create-profile-section h3{
   display: none;
@@ -464,6 +472,10 @@ textarea{
   color: red;
   margin: 20px 0 20px 0;
 }
+.create-profile-section span{
+  display: none;
+  color: red;
+}
 .create-profile-form input{
   width: 300px;
   font-size: 1.2rem;
@@ -471,6 +483,186 @@ textarea{
   margin: 0 0 10px 0;
   border: 1px solid #2AABE2;
   border-radius: 3px;
+}
+.slideOne {
+  width: 50px;
+  height: 7px;
+  background: rgba(42,	171,	226, .2);
+  margin: 20px 0 20px -100px;
+  position: relative;
+  border-radius: 50px;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+}
+.slideOne label {
+  display: block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: -5px;
+  left: -3px;
+  cursor: pointer;
+  background: #000;
+  background: -webkit-linear-gradient(top, #2AABE2 0%, #2AABE2 40%, #2AABE2 100%);
+  background: linear-gradient(to bottom, #2AABE2 0%, #2AABE2 40%, #2AABE2 100%);
+  border-radius: 50px;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.slideOne input[type=checkbox] {
+  visibility: hidden;
+}
+.slideOne input[type=checkbox]:checked + label {
+  left: 37px;
+}
+.slideTwo {
+  width: 50px;
+  height: 7px;
+  background: rgba(42,	171,	226, .2);
+  margin: 20px 0 20px -100px;
+  position: relative;
+  border-radius: 50px;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+}
+.slideTwo label {
+  display: block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: -5px;
+  left: -3px;
+  cursor: pointer;
+  background: #000;
+  background: -webkit-linear-gradient(top, #2AABE2 0%, #2AABE2 40%, #2AABE2 100%);
+  background: linear-gradient(to bottom, #2AABE2 0%, #2AABE2 40%, #2AABE2 100%);
+  border-radius: 50px;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.slideTwo input[type=checkbox] {
+  visibility: hidden;
+}
+.slideTwo input[type=checkbox]:checked + label {
+  left: 37px;
+}
+.slideThree {
+  width: 50px;
+  height: 7px;
+  background: rgba(42,	171,	226, .2);
+  margin: 20px 0 20px -100px;
+  position: relative;
+  border-radius: 50px;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+}
+.slideThree label {
+  display: block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: -5px;
+  left: -3px;
+  cursor: pointer;
+  background: #000;
+  background: -webkit-linear-gradient(top, #2AABE2 0%, #2AABE2 40%, #2AABE2 100%);
+  background: linear-gradient(to bottom, #2AABE2 0%, #2AABE2 40%, #2AABE2 100%);
+  border-radius: 50px;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.slideThree input[type=checkbox] {
+  visibility: hidden;
+}
+.slideThree input[type=checkbox]:checked + label {
+  left: 37px;
+}
+.slideFour {
+  width: 50px;
+  height: 7px;
+  background: rgba(42,	171,	226, .2);
+  margin: 20px 0 20px -100px;
+  position: relative;
+  border-radius: 50px;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+}
+.slideFour label {
+  display: block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: -5px;
+  left: -3px;
+  cursor: pointer;
+  background: #000;
+  background: -webkit-linear-gradient(top, #2AABE2 0%, #2AABE2 40%, #2AABE2 100%);
+  background: linear-gradient(to bottom, #2AABE2 0%, #2AABE2 40%, #2AABE2 100%);
+  border-radius: 50px;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.slideFour input[type=checkbox] {
+  visibility: hidden;
+}
+.slideFour input[type=checkbox]:checked + label {
+  left: 37px;
+}
+.slideFive {
+  width: 50px;
+  height: 7px;
+  background: rgba(42,	171,	226, .2);
+  margin: 20px 0 20px -100px;
+  position: relative;
+  border-radius: 50px;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+}
+.slideFive label {
+  display: block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: -5px;
+  left: -3px;
+  cursor: pointer;
+  background: #000;
+  background: -webkit-linear-gradient(top, #2AABE2 0%, #2AABE2 40%, #2AABE2 100%);
+  background: linear-gradient(to bottom, #2AABE2 0%, #2AABE2 40%, #2AABE2 100%);
+  border-radius: 50px;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.slideFive input[type=checkbox] {
+  visibility: hidden;
+}
+.slideFive input[type=checkbox]:checked + label {
+  left: 37px;
+}
+.project-type-select{
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+.inner-slide{
+  width: 150px;
+  display: flex;
+  justify-content: center;
+}
+#project-type-select{
+  width: auto;
+  color: red !important ;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  margin: 0 0 10px 0;
+  border: 1px solid #2AABE2;
+  border-radius: 3px;
+}
+#skill-highlight-title{
+  padding: 20px 0 8px 0;
+    width: 300px;
+    text-align: center;
+    border-bottom: 1px solid rgba(0,0,0, .2);
 }
 .studentGetSection{
   display: flex;
@@ -572,10 +764,25 @@ color: white;
   border: 2px solid rgba(0,0,0, .2);
   color:white;
 }
+.discover-btn-small{
+  margin: 2px 5px;
+  padding: 2px 10px;
+  font-size: .9rem;
+  background: #2AABE2;
+  border-radius: 3px;
+  border: 1px solid rgba(0,0,0, .2);
+  color:white;
+}
+.discover-btn-small:hover{
+  background: white;
+  border-radius: 3px;
+  border: 1px solid #2AABE2;
+  color: #2AABE2;
+}
 .discover-btn{
   /*width: 300px;*/
   margin: 10px 20px;
-  padding: 10px 20px;
+  padding: 10px 20px ;
   font-size: 1.5rem;
   background: #2AABE2;
   border-radius: 3px;
@@ -640,10 +847,45 @@ color:white;
 }
 .create-project-form .discover-btn-2{
   width: 200px;
-  padding: 10px 20px;
+  padding: 10px 20px ;
   font-size: 1.5rem;
   background: #2AABE2;
   border-radius: 3px;
   border: 2px solid rgba(0,0,0, .2);
   color:white;
+}
+.create-project-form .discover-btn-2-alt{
+  width: 200px;
+  padding: 10px 20px 30px 20px ;
+  font-size: 1.5rem;
+  background: #2AABE2;
+  border-radius: 3px;
+  border: 2px solid rgba(0,0,0, .2);
+  color:white;
+}
+#request-invite{
+  margin: 5px;
+  font-weight: 200;
+  opacity: .65;
+  transition: all .5s;
+}
+#request-invite:hover{
+  margin: 5px;
+  font-weight: 200;
+  opacity: 1;
+}
+#request-invite-2{
+  color: black;
+  margin: 5px;
+  font-weight: 200;
+  opacity: .65;
+  transition: all .5s;
+}
+#request-invite-2:hover{
+  margin: 5px;
+  font-weight: 200;
+  opacity: 1;
+}
+#explainInvite{
+  color: black;
 }

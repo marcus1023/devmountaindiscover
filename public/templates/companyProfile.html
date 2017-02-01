@@ -1,41 +1,41 @@
+<employer-head></employer-head>
 <div ng-controller="mainController">
 <section class="user-profile-section">
-<div class="top-spacer"></div>
-<div class="company-profile-navbar">
-  <ul>
-    <li>Projects</li>
-    <li>Students</li>
-    <li>inbox </li>
-  </ul>
-</div>
 <section class="user-profile-head">
-    <div class="profile-picture" style="background: url('{{currentUser.profileImage}}'); background-size:cover; background-position: center center;">
-      <button class="change-profile-img" ng-click="newProfileimg()">Change</button>
-    </div>
+  <div class="profile-picture" style="background: url('{{currentUser.profileimage}}'); background-size:cover; background-position: center center;">
+    <button class="change-profile-img" ng-click="newProfileimg()">Change</button>
+  </div>
   <div class="user-profile-crossection">
-    <div>
-      <h1> {{currentUser.name}}</h1>
-      <div class="user-profile-update">
-        <!-- <button>Update Profile</button> -->
-      </div>
-      <h3>DevMountain: <a>{{currentUser.studentsReport}} Students</a></h3>
-      <h3>Projects Posted: {{currentUser.ProjectsPosted}}</h3>
-      <h3 class="test">Project Completions: {{currentUser.ProjectsCompleted}}</h3>
-      <!-- <h3 class="progress-title">Class Progress: {{currentUser.progress}}%</h3>
-      <div class="current-user-progress">
-        <div style="width: {{currentUser.progress}}%"></div>
-      </div> -->
-      <button ui-sref="newProject">New Project</button>
-      <button>{{currentUser.name}}'s Projects</button>
+    <div class="user-stats-info">
+      <h1> {{currentUser.lastname}}</h1>
+      <div class="h-three-badges-div">
+        <h3 class="h-three-badges">Badges: {{currentUser.badge}}</h3>
+        </div>
+      <h3>Projects Completed: {{currentUser.ProjectsCompleted}}</h3>
+      <h3 class="githubH3"> Linkedin:<a href="http://localhost:3000/auth/linkedin" ><button id="linkedinConnect" ng-clck="linkedinOauth()">{{linkedinConnected}}Connect Linkedin</button></a></h3>
     </div>
+    <section class="user-profile-bio">
+      <h2>About {{currentUser.firstName}}</h2>
+      <span>{{currentUser.userbio}}</span><br>
+      <textarea placeholder="Tell us about yourself...  "id="newUserBio">{{currentUser.userbio}}</textarea><br>
+      <button class="change-user-bio" ng-click="newUserBio()">Change</button>
+      <button class="save-user-bio" ng-click="saveUserBio()">Save</button>
+    </section>
   </div>
 </section>
+<section class="user-activity-header">
+  <div class="user-progress-section">
+    <input type="text" placeholder="Search..." class="user-search"></input><div class="user-search-btn" ui-sref="searchresults"></div>
+  </div>
+  <div class="choose-timeline-state">
+    <button ui-sref="companyProfile.newsfeed">NewsFeed</button>
+    <button ui-sref="companyProfile.timeline"> Timeline</button>
+  </div>
+</section>
+<section class="user-activity-timeline">
+  <ui-view>
+  </ui-view>
 
-<section class="user-profile-bio">
-  <h2>About {{currentUser.name}}</h2>
-  <span>Squashy armchairs dirt on your nose brass scales crush the Sopophorous bean with flat side of silver dagger, releases juice better than cutting. Full moon Whomping Willow three turns should do it lemon drops. Locomotor trunks owl treats that will be 50 points, Mr. Potter. Witch Weekly, he will rise again and he will come for us, headmaster Erumpent horn.</span><br>
-<span>
-  Hedwig Daily Prophet treacle tart full-moon Ollivanders You-Know-Who cursed. Fawkes maze raw-steak Voldemort Goblin Wars snitch Forbidden forest grindylows wool socks. </span>
 </section>
 
 </section>
